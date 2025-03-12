@@ -3,6 +3,9 @@ import Navbar from './component/navbar';
 import Banner from './component/Banner';
 import About from './component/About';
 import Services from './component/Services';
+import Contact from './component/Contact';
+import Footer from './component/Footer';
+
 const App = () => {
   return (
     <>
@@ -10,6 +13,8 @@ const App = () => {
       <Banner/>
       <About/>
       <Services/>
+      <Contact/>
+      <Footer/>
     </>
   )
 }

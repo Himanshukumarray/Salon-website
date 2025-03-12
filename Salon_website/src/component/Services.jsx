@@ -94,6 +94,13 @@ const Services = () => {
         },
     ];
 
+    const toggleServices = () =>{
+        setShowAll(!showAll);
+        if(!showAll){
+            scroll.scrollMore(500,{smooth:true})
+        }
+    }
+
     return (
         <section id="services" className="py-20 bg-gradient-to-b from-[#fceedd] to-[#f9eab8]">
             <div className="container mx-auto px-4 md:px-6 lg:px-8">
@@ -114,12 +121,45 @@ const Services = () => {
                                 <div className="absolute top-4 right-4 z-10 bg-white/30 backdrop:blur-sm p-2 rounded-full">
                                     {service.icon}
                                 </div>
-                                <img src="" alt="" />
+                                <img src={service.image} alt={service.title} className="w-full h-full object-cover transform transition-transform duration-500 group-hover:scale-110" loading="lazy" />
+
+                                <div className="absolute bottom-0 left-8 right-8 bg-gradient-to-t from-black/70 to-transparent p-4 rounded-lg">
+                                    {/* PLACEHOLDER FOR PRICE */}
+                                    <span className="bg-amber-500/90 text-white px-5 py-2 rounded-full text-sm font-bold shadow-lg">
+                                        {service.price}
+                                    </span>
+                                </div>
+                            </div>
+
+                            <div className="p-6">
+                                {/* Tags Section */}
+                                <div className="flex flex-wrap gap-2 mb-3">
+                                    {service.tags.map((tag) => (
+                                        <span className="bg-amber-50 text-amber-700 px-3 py-1 rounded-full text-sm font-medium border border-amber-200 hover:bg-amber-100 transition-colors">
+                                            {tag}
+                                        </span>
+                                    ))}
+                                </div>
+
+                                <h3 className="text-2xl font-[Dancing_Script] mb-2 text-amber-800">
+                                    {service.title}
+                                </h3>
+                                <p className="text-amber-600 leading-relaxed font-medium">
+                                    {service.description}
+                                </p>
                             </div>
                         </div>
                     ))}
                 </div>
+                    {/*TOGGLE */}
+                    <div className="flex justify-center mt-12">
+                        <button className="bg-gradient-to-r from-amber-400 to-amber-500 text-black px-8 py-3 rounded-full hover:opacity-90 transition-all duration-300 hover:scale-105 shadow-lg shadow-amber-200 font-bold flex items-center gap-2" onClick={toggleServices}>
+                            {showAll ? "Show Less" : "Explore More"}
+                            <GiFlowerTwirl className="w-5 h-5 animate-pulse" />
 
+                        </button>
+
+                    </div>
             </div>
 
         </section>
