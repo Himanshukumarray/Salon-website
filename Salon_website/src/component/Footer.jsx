@@ -1,5 +1,5 @@
 import React from 'react'
-import { FiInstagram ,FiFacebook, FiTwitter} from "react-icons/fi";
+import { FiInstagram, FiFacebook, FiTwitter, FiHeart } from "react-icons/fi";
 
 
 const Footer = () => {
@@ -77,6 +77,19 @@ const Footer = () => {
                             ))}
                         </div>
                     </div>
+                </div>
+
+
+                {/*COPYRIGHT DIVIDER */}
+                <div className="border-t border-amber-100 mt-8 lg:mt-12 pt-6 lg:pt-8 text-center">
+                    <p className="text-sm text-amber-600 font-medium mb-2">
+                        &copy; {new Date().getFullYear()} BeautySalon. All Rights Reserved.
+                    </p>
+                    <a href="/privacy-policy" target='_blank' rel='noopener noreference'
+                        className="inline-block hover:text-purple-700 text-sm font-[Poppins] bg-gradient-to-r from-amber-500 to-amber-600
+                          bg-clip-text text-transparent hover:scale-105 text-transform hover:underline ">
+                        Privacy Policy
+                    </a>
 
 
                 </div>

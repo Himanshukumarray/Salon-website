@@ -22,8 +22,6 @@ const Banner = () => {
 
                 {/* DECORATIVE DEVIDER */}
                 <div className='w-48 md:w-64 h-1 bg-gradient-to-r from-transparent via-lime-300 to-transparent mx-auto my-6 md:my-8 rounded-full' />
-
-                {/*TAGLINE */}
                 { /* TAGLINE */}
                 <div className="space-y-4 md:space-y-6 mb-8 md:mb-12">
 
