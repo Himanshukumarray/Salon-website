@@ -54,7 +54,7 @@ const Contact = () => {
 
         // Simulate form submission process
         setTimeout(() => {
-            window.open(`https://wa.me/+6201204954?text=${message}`,'_blank');
+            window.open(`https://wa.me/+916201204954?text=${message}`,'_blank');
             setName('');
             setPhone('');
             setSelectedServices([]);
